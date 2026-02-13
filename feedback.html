@@ -4,38 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Обратная связь — Я студент ВШЭ</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .form-title {
+        text-transform: uppercase;
+      }
+
+      #feedback-tip {
+        border-left: 4px solid #b10101;
+      }
+
+      .required-mark {
+        color: #b10101;
+      }
+    </style>
   </head>
-  <body>
-    <header>
-      <h1>Обратная связь</h1>
+  <body id="page-feedback">
+    <header class="site-header">
+      <h1 style="text-shadow: 1px 1px 0 #ffffff;">Обратная связь</h1>
       <p>Поделитесь мнением о студенческой жизни и обучении в ВШЭ.</p>
     </header>
 
-    <nav aria-label="Основная навигация">
-      <ul>
+    <nav id="main-nav" class="site-nav" aria-label="Основная навигация">
+      <ul class="nav-list">
         <li><a href="index.html">Главная</a></li>
         <li><a href="feedback.html" aria-current="page">Обратная связь</a></li>
       </ul>
     </nav>
 
-    <main>
-      <section>
-        <h2>Форма обратной связи</h2>
-        <form action="#" method="post">
-          <fieldset>
+    <main class="page-layout single-column">
+      <section class="content-card">
+        <h2 class="form-title">Форма обратной связи</h2>
+        <p id="feedback-tip" style="padding: 10px;">Поля, отмеченные <span class="required-mark">*</span>, обязательны.</p>
+        <form class="feedback-form" action="#" method="post">
+          <fieldset class="form-block">
             <legend>Личные данные</legend>
 
-            <label for="name">Имя:</label>
+            <label for="name">Имя: <span class="required-mark">*</span></label>
             <input id="name" name="name" type="text" placeholder="Введите имя" required />
 
-            <label for="email">Email:</label>
+            <label for="email">Email: <span class="required-mark">*</span></label>
             <input id="email" name="email" type="email" placeholder="example@mail.com" required />
 
             <label for="group">Учебная группа:</label>
             <input id="group" name="group" type="text" placeholder="БПМИ-101" />
           </fieldset>
 
-          <fieldset>
+          <fieldset class="form-block">
             <legend>Ваш опыт</legend>
 
             <label for="year">Курс:</label>
@@ -47,14 +62,18 @@
             </select>
 
             <p>Формат обучения:</p>
-            <label><input type="radio" name="format" value="offline" checked /> Очно</label>
-            <label><input type="radio" name="format" value="online" /> Онлайн</label>
-            <label><input type="radio" name="format" value="mixed" /> Смешанный</label>
+            <div class="choice-row">
+              <label><input type="radio" name="format" value="offline" checked /> Очно</label>
+              <label><input type="radio" name="format" value="online" /> Онлайн</label>
+              <label><input type="radio" name="format" value="mixed" /> Смешанный</label>
+            </div>
 
             <p>Что вам особенно нравится?</p>
-            <label><input type="checkbox" name="likes" value="lectures" /> Лекции</label>
-            <label><input type="checkbox" name="likes" value="projects" /> Проекты</label>
-            <label><input type="checkbox" name="likes" value="community" /> Студенческое сообщество</label>
+            <div class="choice-row">
+              <label><input type="checkbox" name="likes" value="lectures" /> Лекции</label>
+              <label><input type="checkbox" name="likes" value="projects" /> Проекты</label>
+              <label><input type="checkbox" name="likes" value="community" /> Студенческое сообщество</label>
+            </div>
 
             <label for="rating">Оценка учебного процесса (1-10):</label>
             <input id="rating" name="rating" type="range" min="1" max="10" value="8" />
@@ -66,13 +85,15 @@
             <textarea id="comment" name="comment" rows="5" placeholder="Напишите ваше мнение"></textarea>
           </fieldset>
 
-          <button type="submit">Отправить</button>
-          <button type="reset">Очистить</button>
+          <div class="action-row">
+            <button type="submit">Отправить</button>
+            <button type="reset" style="font-weight: 700;">Очистить</button>
+          </div>
         </form>
       </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
       <p><small>© 2026 Студенческий сайт | НИУ ВШЭ</small></p>
       <address>
         Вернуться на <a href="index.html">главную страницу</a>

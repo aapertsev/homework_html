@@ -1,0 +1,288 @@
+:root {
+  --bg-main: #eef3fb;
+  --bg-card: #ffffff;
+  --accent: #003a8c;
+  --accent-soft: #e8f0ff;
+  --text-main: #1d2734;
+  --text-muted: #4a5568;
+  --border: #cfd8e6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-main);
+  background: linear-gradient(180deg, #f8fbff 0%, var(--bg-main) 100%);
+}
+
+#page-home {
+  background-attachment: fixed;
+}
+
+.site-header {
+  background-color: var(--accent-soft);
+  border-bottom: 2px solid var(--border);
+  text-align: center;
+  padding: 20px;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 2.1rem;
+  color: var(--accent);
+}
+
+.site-header p {
+  color: var(--text-muted);
+}
+
+#main-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-nav {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-list {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 16px;
+  list-style: none;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+
+.nav-list li {
+  margin: 0;
+}
+
+.nav-list a {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+.nav-list a:hover,
+.nav-list a:focus-visible {
+  background-color: var(--accent-soft);
+  border-color: var(--border);
+}
+
+a[aria-current="page"] {
+  background-color: var(--accent);
+  color: #ffffff;
+}
+
+.page-layout {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 0 16px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.single-column {
+  display: block;
+}
+
+.content-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.06);
+}
+
+.content-card h2 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+.info-section + .info-section {
+  margin-top: 12px;
+  border-top: 1px dashed var(--border);
+  padding-top: 12px;
+}
+
+.info-section h2::before {
+  content: "• ";
+  color: #c77d00;
+}
+
+#quote-day::first-letter {
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+.schedule-list {
+  list-style-type: upper-roman;
+  list-style-position: inside;
+}
+
+.facts-list dt {
+  font-weight: 700;
+  color: #223b66;
+}
+
+.facts-list dd {
+  margin: 0 0 8px 18px;
+}
+
+aside.side-card {
+  width: 34%;
+}
+
+article.content-card {
+  width: 66%;
+}
+
+.campus-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+figcaption {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.feedback-form {
+  margin-top: 12px;
+}
+
+.form-block {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 14px;
+  padding: 12px;
+}
+
+.form-block > label {
+  display: block;
+  margin: 10px 0 6px;
+  font-weight: 600;
+}
+
+.feedback-form input,
+.feedback-form select,
+.feedback-form textarea {
+  width: 100%;
+  border: 1px solid #aeb9cc;
+  border-radius: 8px;
+  padding: 9px;
+  font-size: 1rem;
+}
+
+.feedback-form input:focus,
+.feedback-form select:focus,
+.feedback-form textarea:focus {
+  outline: 2px solid #7ea6f5;
+  outline-offset: 1px;
+}
+
+.choice-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.choice-row label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f5f8ff;
+  border: 1px solid #d6e0f1;
+  border-radius: 8px;
+  padding: 6px 10px;
+}
+
+.choice-row input[type="radio"],
+.choice-row input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+
+.action-row {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: var(--accent);
+}
+
+button[type="reset"] {
+  background-color: #5b6b84;
+}
+
+button:hover {
+  opacity: 0.92;
+}
+
+.important-note {
+  color: #7f0000 !important;
+  font-weight: 700;
+}
+
+.site-footer {
+  max-width: 1100px;
+  margin: 16px auto 0;
+  padding: 12px 16px 22px;
+  border-top: 1px solid var(--border);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.site-footer a {
+  color: var(--accent);
+}
+
+@media (max-width: 900px) {
+  .page-layout {
+    flex-direction: column;
+  }
+
+  article.content-card,
+  aside.side-card {
+    width: 100%;
+  }
+
+  .nav-list {
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .action-row {
+    flex-direction: column;
+  }
+}

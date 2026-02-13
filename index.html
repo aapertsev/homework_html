@@ -4,46 +4,60 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Я — студент ВШЭ</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .hero-subtitle {
+        font-style: italic;
+      }
+
+      #quote-day {
+        background-color: #f9f3dd;
+      }
+
+      .inline-marker {
+        text-decoration: underline;
+      }
+    </style>
   </head>
-  <body>
-    <header>
-      <h1>Я — студент ВШЭ</h1>
-      <p>Учусь, развиваюсь и строю карьеру вместе с университетом.</p>
+  <body id="page-home">
+    <header class="site-header">
+      <h1 style="letter-spacing: 1px;">Я — студент ВШЭ</h1>
+      <p class="hero-subtitle">Учусь, развиваюсь и строю карьеру вместе с университетом.</p>
     </header>
 
-    <nav aria-label="Основная навигация">
-      <ul>
+    <nav id="main-nav" class="site-nav" aria-label="Основная навигация">
+      <ul class="nav-list">
         <li><a href="index.html" aria-current="page">Главная</a></li>
         <li><a href="feedback.html">Обратная связь</a></li>
       </ul>
     </nav>
 
-    <main>
-      <article>
-        <section>
+    <main class="page-layout">
+      <article class="content-card">
+        <section class="info-section">
           <h2>Кто я</h2>
           <p>
             Я студент <strong>Национального исследовательского университета</strong>
-            <abbr title="Национальный исследовательский университет «Высшая школа экономики»">ВШЭ</abbr>.
+            <abbr class="inline-marker" title="Национальный исследовательский университет «Высшая школа экономики»">ВШЭ</abbr>.
             Моя цель — получить качественное образование и практические навыки.
           </p>
-          <blockquote>
+          <blockquote id="quote-day" style="padding: 12px;">
             «Образование — это инвестиция в будущее».
           </blockquote>
         </section>
 
-        <section>
+        <section class="info-section">
           <h2>Мой учебный день</h2>
-          <ol>
+          <ol class="schedule-list">
             <li>Лекции и семинары</li>
             <li>Работа над проектами</li>
             <li>Самостоятельное изучение материалов</li>
           </ol>
         </section>
 
-        <section>
+        <section class="info-section">
           <h2>Факты обо мне</h2>
-          <dl>
+          <dl class="facts-list">
             <dt>Направление</dt>
             <dd>Прикладная математика</dd>
             <dt>Курс</dt>
@@ -54,10 +68,11 @@
         </section>
       </article>
 
-      <aside>
+      <aside class="content-card side-card">
         <h2>Галерея</h2>
         <figure>
           <img
+            class="campus-image"
             src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80"
             alt="Современный университетский кампус"
             width="600"
@@ -68,9 +83,9 @@
       </aside>
     </main>
 
-    <footer>
+    <footer class="site-footer">
       <p>
-        <small>2026 Студенческий сайт | НИУ ВШЭ</small>
+        <small class="important-note">2026 Студенческий сайт | НИУ ВШЭ</small>
       </p>
       <address>
         Контакт: <a href="mailto:aapertsev@edu.hse.ru">aapertsev@edu.hse.ru</a>
