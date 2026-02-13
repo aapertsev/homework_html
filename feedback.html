@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Обратная связь — Я студент ВШЭ</title>
+  </head>
+  <body>
+    <header>
+      <h1>Обратная связь</h1>
+      <p>Поделитесь мнением о студенческой жизни и обучении в ВШЭ.</p>
+    </header>
+
+    <nav aria-label="Основная навигация">
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="feedback.html" aria-current="page">Обратная связь</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section>
+        <h2>Форма обратной связи</h2>
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Личные данные</legend>
+
+            <label for="name">Имя:</label>
+            <input id="name" name="name" type="text" placeholder="Введите имя" required />
+
+            <label for="email">Email:</label>
+            <input id="email" name="email" type="email" placeholder="example@mail.com" required />
+
+            <label for="group">Учебная группа:</label>
+            <input id="group" name="group" type="text" placeholder="БПМИ-101" />
+          </fieldset>
+
+          <fieldset>
+            <legend>Ваш опыт</legend>
+
+            <label for="year">Курс:</label>
+            <select id="year" name="year">
+              <option value="1">1 курс</option>
+              <option value="2">2 курс</option>
+              <option value="3">3 курс</option>
+              <option value="4">4 курс</option>
+            </select>
+
+            <p>Формат обучения:</p>
+            <label><input type="radio" name="format" value="offline" checked /> Очно</label>
+            <label><input type="radio" name="format" value="online" /> Онлайн</label>
+            <label><input type="radio" name="format" value="mixed" /> Смешанный</label>
+
+            <p>Что вам особенно нравится?</p>
+            <label><input type="checkbox" name="likes" value="lectures" /> Лекции</label>
+            <label><input type="checkbox" name="likes" value="projects" /> Проекты</label>
+            <label><input type="checkbox" name="likes" value="community" /> Студенческое сообщество</label>
+
+            <label for="rating">Оценка учебного процесса (1-10):</label>
+            <input id="rating" name="rating" type="range" min="1" max="10" value="8" />
+
+            <label for="date">Дата заполнения:</label>
+            <input id="date" name="date" type="date" />
+
+            <label for="comment">Комментарий:</label>
+            <textarea id="comment" name="comment" rows="5" placeholder="Напишите ваше мнение"></textarea>
+          </fieldset>
+
+          <button type="submit">Отправить</button>
+          <button type="reset">Очистить</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p><small>© 2026 Студенческий сайт | НИУ ВШЭ</small></p>
+      <address>
+        Вернуться на <a href="index.html">главную страницу</a>
+      </address>
+    </footer>
+  </body>
+</html>
